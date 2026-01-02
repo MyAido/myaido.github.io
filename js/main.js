@@ -7,8 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             const icon = mobileMenuBtn.querySelector('i');
+            const isActive = navLinks.classList.contains('active');
+
+            // Toggle Body Scroll
+            if (isActive) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+
             if (icon) {
-                if (navLinks.classList.contains('active')) {
+                if (isActive) {
                     icon.classList.remove('ri-menu-line');
                     icon.classList.add('ri-close-line');
                 } else {
