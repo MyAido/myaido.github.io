@@ -73,8 +73,10 @@
                     </p>
                     <p>We use this powerful permission for exactly two technical reasons:</p>
                     <ol style="margin-left: 20px; line-height: 1.8;">
-                        <li><strong>To "Read" Triggers:</strong> We monitor for specific keywords (like <code>@ai</code>
-                            or <code>.fix</code>) so we know when to activate.</li>
+                        <li><strong>To "Read" Triggers:</strong> We monitor for specific keywords (like
+                            <code>@aido</code>
+                            or <code>@fixg</code>) so we know when to activate.
+                        </li>
                         <li><strong>To "Write" Responses:</strong> Once the AI generates a response, we use this
                             permission to insert the text into the field for you.</li>
                     </ol>
@@ -95,6 +97,17 @@
                         <p style="margin: 0; font-weight: 600;"><i class="ri-shield-check-line"></i> The Accessibility
                             Service does NOT run continuously. It reacts only to user-initiated text input events and
                             immediately returns to an idle state.</p>
+                    </div>
+
+                    <div class="info-box success" style="margin-bottom: 1.5rem;">
+                        <h4><i class="ri-information-line"></i> Critical: Trigger-Only Processing</h4>
+                        <p style="margin: 0;"><strong>Your text is ONLY processed when you use a trigger command (like
+                                <code>@aido</code> or <code>@fixg</code>).</strong></p>
+                        <ul style="margin-top: 0.5rem; margin-bottom: 0;">
+                            <li>We do NOT continuously read your text</li>
+                            <li>We do NOT send anything to AI unless you explicitly trigger it</li>
+                            <li>If you don't use a trigger, nothing is processed or transmitted</li>
+                        </ul>
                     </div>
 
                     <div class="info-box danger">
@@ -124,7 +137,7 @@
                         &nbsp;&nbsp;if (event.type != TYPE_VIEW_TEXT_CHANGED) return;<br><br>
                         &nbsp;&nbsp;// 3. Trigger Detection: Does text end with command?<br>
                         &nbsp;&nbsp;val text = event.text.toString()<br>
-                        &nbsp;&nbsp;if (text.endsWith("@ai")) {<br>
+                        &nbsp;&nbsp;if (text.endsWith("@aido")) {<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;processAiCommand(text)<br>
                         &nbsp;&nbsp;}<br>
                         }
