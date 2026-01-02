@@ -5,8 +5,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('close-menu-btn');
     const overlay = document.getElementById('menu-overlay');
 
-    function openMenu() {
+    // Ensure menu is closed when page loads (fixes navigation state issue)
+    function resetMenu() {
         if (mobileMenu) {
+            mobileMenu.classList.remove('active');
+        }
+        if (overlay) {
+            overlay.classList.remove('active');
+        }
+        document.body.style.overflow = '';
+    }
+
+    // Reset on page load
+    resetMenu();
+
+    function openMenu() {
+        if (mobileMenu && overlay) {
             mobileMenu.classList.add('active');
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent scrolling
@@ -14,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function closeMenu() {
-        if (mobileMenu) {
+        if (mobileMenu && overlay) {
             mobileMenu.classList.remove('active');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
@@ -24,6 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuBtn) menuBtn.addEventListener('click', openMenu);
     if (closeBtn) closeBtn.addEventListener('click', closeMenu);
     if (overlay) overlay.addEventListener('click', closeMenu);
+
+    // Auto-close menu when clicking navigation links
+    const menuLinks = document.querySelectorAll('#mobile-menu a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
+        });
+    });
 
     // 2. Add "Verified" badges animation
     const badges = document.querySelectorAll('.status-badge');

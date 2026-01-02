@@ -12,7 +12,7 @@ Create a preview URL (temporary, hashed)
 firebase hosting:channel:deploy preview
 
 
-
+npx http-server
 
 
 
