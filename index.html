@@ -6,7 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aido - Smart AI Assistant</title>
     <meta name="description"
-        content="Enhance your Android experience with Aido. AI-powered text assistance, screen reading, and smart replies directly in any app using Accessibility Services.">
+        content="Enhance your Android experience with Aido. AI-powered text assistance, screen reading, and smart replies directly in any app using Accessibility Services. Privacy-first & Local.">
+    <meta name="keywords"
+        content="Aido, AI Assistant, Android Accessibility, ChatGPT for Android, Text Expansion, Smart Reply, Privacy First AI, Local AI">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://myaido.web.app/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://myaido.web.app/">
+    <meta property="og:title" content="Aido - AI Accessibility Assistant for Android">
+    <meta property="og:description"
+        content="Enhance your Android experience with Aido. AI-powered text assistance, screen reading, and smart replies directly in any app.">
+    <meta property="og:image" content="https://myaido.web.app/res/viddo.gif">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://myaido.web.app/">
+    <meta property="twitter:title" content="Aido - AI Accessibility Assistant for Android">
+    <meta property="twitter:description"
+        content="Enhance your Android experience with Aido. AI-powered text assistance, screen reading, and smart replies directly in any app.">
+    <meta property="twitter:image" content="https://myaido.web.app/res/viddo.gif">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +42,28 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Aido",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "UtilitiesApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Aido is an AI-powered accessibility assistant for Android that provides smart replies, text expansion, and productivity tools directly in any app.",
+      "image": "https://myaido.web.app/res/viddo.gif",
+      "author": {
+        "@type": "Person",
+        "name": "Rubex"
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -33,7 +80,7 @@
                 <a href="download.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Get
                     App</a>
             </nav>
-            <button class="mobile-menu-btn"><i class="ri-menu-line"></i></button>
+            <button class="mobile-menu-btn" aria-label="Open Menu"><i class="ri-menu-line"></i></button>
         </div>
     </header>
 
@@ -177,7 +224,7 @@
                     <div class="glass-card"
                         style="padding: 0; overflow: hidden; height: 300px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2);">
                         <!-- Integration GIF -->
-                        <img src="res/viddo.gif" alt="Aido App Integration Demo"
+                        <img src="res/viddo.gif" alt="Aido App Integration Demo" loading="lazy"
                             style="width: 100%; height: 100%; object-fit: contain; display: block;">
                     </div>
                 </div>
