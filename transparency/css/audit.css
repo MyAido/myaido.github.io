@@ -361,6 +361,9 @@ nav.audit-nav {
     padding: 12px 15px;
     border-bottom: 1px solid var(--border);
     color: var(--text);
+    min-width: 160px;
+    /* Prevent text crushing */
+    vertical-align: top;
 }
 
 .permission-table tr:last-child td {
