@@ -42,23 +42,28 @@
                     <li class="sidebar-menu-header">Core Audit</li>
                     <li><a href="/transparency/index.html"><i class="ri-file-shield-line" style="margin-right:8px"></i>
                             Constitution</a></li>
-                    <li><a href="/transparency/permissions.html"><i class="ri-lock-unlock-line" style="margin-right:8px"></i>
+                    <li><a href="/transparency/permissions.html"><i class="ri-lock-unlock-line"
+                                style="margin-right:8px"></i>
                             Permissions</a></li>
                     <li><a href="/transparency/accessibility.html"><i class="ri-eye-line" style="margin-right:8px"></i>
                             Accessibility Service</a></li>
-                    <li><a href="/transparency/input-handling.html"><i class="ri-keyboard-box-line" style="margin-right:8px"></i>
+                    <li><a href="/transparency/input-handling.html"><i class="ri-keyboard-box-line"
+                                style="margin-right:8px"></i>
                             Input Handling</a></li>
 
                     <li class="sidebar-menu-header" style="margin-top: 20px;">Logic & Data</li>
-                    <li><a href="/transparency/code-behavior.html"><i class="ri-code-s-slash-line" style="margin-right:8px"></i> Code
+                    <li><a href="/transparency/code-behavior.html"><i class="ri-code-s-slash-line"
+                                style="margin-right:8px"></i> Code
                             Behavior</a></li>
-                    <li><a href="/transparency/data-safety.html"><i class="ri-database-2-line" style="margin-right:8px"></i> Data
+                    <li><a href="/transparency/data-safety.html"><i class="ri-database-2-line"
+                                style="margin-right:8px"></i> Data
                             Processing</a></li>
                     <li><a href="/transparency/controls.html" class="active"><i class="ri-equalizer-line"
                                 style="margin-right:8px"></i> User Controls</a></li>
 
                     <li class="sidebar-menu-header" style="margin-top: 20px;">Safety</li>
-                    <li><a href="/transparency/zero-tolerance.html"><i class="ri-error-warning-line" style="margin-right:8px"></i>
+                    <li><a href="/transparency/zero-tolerance.html"><i class="ri-error-warning-line"
+                                style="margin-right:8px"></i>
                             Zero Tolerance</a></li>
                 </ul>
             </aside>
@@ -83,11 +88,13 @@
                 </section>
 
                 <section class="audit-section">
-                    <h2><i class="ri-spam-3-line" style="color: var(--danger);"></i> The Blacklist</h2>
-                    <p>Don't want Aido reading your Signal messages or banking app? No problem.</p>
-                    <p>Go to <strong>Settings > Disabled Apps</strong> (Blacklist). Select any installed app. Aido's
-                        code (`disabledApps`) will rigorously ignore every event coming from that package name. It
-                        effectively blinds itself to that specific app.</p>
+                    <h2><i class="ri-spam-3-line" style="color: var(--danger);"></i> The Blocklist (Fail-Safe)</h2>
+                    <p>While banking apps automatically block screen reading (via Android's
+                        <code>FLAG_SECURE</code>),
+                        Aido allows you to explicitly <strong>Blacklist</strong> specific apps. This ensures the
+                        Accessibility
+                        Service is completely disabled for that app, providing a redundant safety layer you can control.
+                    </p>
                 </section>
 
                 <section class="audit-section">
@@ -96,6 +103,16 @@
                         can uninstall it via the Play Store or standard Settings menu in seconds, wiping all local data
                         immediately.</p>
                 </section>
+
+                <!-- Page Navigation -->
+                <div class="page-navigation">
+                    <a href="/transparency/data-safety.html" class="nav-btn prev-btn">
+                        <i class="ri-arrow-left-line"></i> Data Processing
+                    </a>
+                    <a href="/transparency/zero-tolerance.html" class="nav-btn next-btn">
+                        Zero Tolerance <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
             </main>
         </div>
     </div>
@@ -108,23 +125,32 @@
             <button id="close-menu-btn" class="mobile-menu-toggle"><i class="ri-close-line"></i></button>
         </div>
         <ul class="sidebar-menu">
-            <li><a href="/transparency/index.html"><i class="ri-file-shield-line" style="margin-right:8px"></i> Constitution</a></li>
-            <li><a href="/transparency/permissions.html"><i class="ri-lock-unlock-line" style="margin-right:8px"></i> Permissions</a>
+            <li><a href="/transparency/index.html"><i class="ri-file-shield-line" style="margin-right:8px"></i>
+                    Constitution</a></li>
+            <li><a href="/transparency/permissions.html"><i class="ri-lock-unlock-line" style="margin-right:8px"></i>
+                    Permissions</a>
             </li>
             <li><a href="/transparency/accessibility.html"><i class="ri-eye-line" style="margin-right:8px"></i>
                     Accessibility Service</a></li>
-            <li><a href="/transparency/input-handling.html"><i class="ri-keyboard-box-line" style="margin-right:8px"></i> Input
+            <li><a href="/transparency/input-handling.html"><i class="ri-keyboard-box-line"
+                        style="margin-right:8px"></i> Input
                     Handling</a></li>
-            <li><a href="/transparency/code-behavior.html"><i class="ri-code-s-slash-line" style="margin-right:8px"></i> Code
+            <li><a href="/transparency/code-behavior.html"><i class="ri-code-s-slash-line" style="margin-right:8px"></i>
+                    Code
                     Behavior</a></li>
-            <li><a href="/transparency/data-safety.html"><i class="ri-database-2-line" style="margin-right:8px"></i> Data
+            <li><a href="/transparency/data-safety.html"><i class="ri-database-2-line" style="margin-right:8px"></i>
+                    Data
                     Processing</a></li>
-            <li><a href="/transparency/controls.html" class="active"><i class="ri-equalizer-line" style="margin-right:8px"></i> User
+            <li><a href="/transparency/controls.html" class="active"><i class="ri-equalizer-line"
+                        style="margin-right:8px"></i> User
                     Controls</a></li>
-            <li><a href="/transparency/zero-tolerance.html"><i class="ri-error-warning-line" style="margin-right:8px"></i> Zero
+            <li><a href="/transparency/zero-tolerance.html"><i class="ri-error-warning-line"
+                        style="margin-right:8px"></i> Zero
                     Tolerance</a></li>
-            <li><a href="/transparency/summary.html"><i class="ri-check-line" style="margin-right:8px"></i> Audit Summary</a></li>
-                    <li><a href="/transparency/resources.html"><i class="ri-book-2-line" style="margin-right:8px"></i> Resources</a></li>
+            <li><a href="/transparency/summary.html"><i class="ri-check-line" style="margin-right:8px"></i> Audit
+                    Summary</a></li>
+            <li><a href="/transparency/resources.html"><i class="ri-book-2-line" style="margin-right:8px"></i>
+                    Resources</a></li>
         </ul>
     </div>
 
@@ -132,4 +158,3 @@
 </body>
 
 </html>
-

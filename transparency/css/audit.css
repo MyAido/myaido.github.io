@@ -394,6 +394,66 @@ nav.audit-nav {
     text-decoration: underline;
 }
 
+/* --- Page Navigation --- */
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+.page-navigation .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.page-navigation .nav-btn:hover {
+    background: rgba(139, 92, 246, 0.1);
+    border-color: var(--primary);
+    transform: translateX(0);
+}
+
+.page-navigation .prev-btn:hover {
+    transform: translateX(-4px);
+}
+
+.page-navigation .next-btn {
+    margin-left: auto;
+}
+
+.page-navigation .next-btn:hover {
+    transform: translateX(4px);
+}
+
+.page-navigation .nav-btn i {
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .page-navigation .nav-btn {
+        font-size: 0.85rem;
+        padding: 10px 16px;
+        gap: 6px;
+    }
+}
+
 /* --- Responsive Media Queries --- */
 @media (max-width: 900px) {
     .container {

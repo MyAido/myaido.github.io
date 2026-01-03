@@ -67,14 +67,18 @@
                             Gmail, etc.). Android requires the Accessibility Service permission to read text from other
                             apps and insert AI responses. We use it ONLY when you trigger a command (like
                             <code>@aido</code>), not continuously. See our <a href="/transparency/accessibility.html"
-                                style="color: var(--primary);">Accessibility Disclosure</a> for technical details.</p>
+                                style="color: var(--primary);">Accessibility Disclosure</a> for technical details.
+                        </p>
                     </div>
 
                     <div class="faq-item">
                         <h3>Q: Can Aido see my passwords or banking information?</h3>
-                        <p><strong>A:</strong> No. Our code explicitly ignores password fields and you can blacklist
-                            banking apps in settings. The Accessibility Service will skip any app you've disabled. We
-                            have a <a href="/transparency/zero-tolerance.html" style="color: var(--primary);">Zero Tolerance
+                        <p><strong>A:</strong> No. First, Android prevents screen reading in banking apps
+                            (<code>FLAG_SECURE</code>).
+                            Second, you can explicitly <strong>Blocklist</strong> apps in Settings for a verified
+                            guarantee.
+                            We have a <a href="/transparency/zero-tolerance.html" style="color: var(--primary);">Zero
+                                Tolerance
                                 Policy</a> against capturing sensitive credentials.</p>
                     </div>
 
@@ -89,7 +93,8 @@
                         <h3>Q: Can the developers see my prompts or conversations?</h3>
                         <p><strong>A:</strong> No. Your prompts go directly from your phone to the AI provider (Google
                             Gemini, OpenAI, etc.). We don't operate a "middleman" server that logs your text. See <a
-                                href="/transparency/data-safety.html" style="color: var(--primary);">Data Safety</a> for the complete
+                                href="/transparency/data-safety.html" style="color: var(--primary);">Data Safety</a> for
+                            the complete
                             data flow.</p>
                     </div>
                 </section>
@@ -123,7 +128,8 @@
                         <p><strong>A:</strong> Aido uses a lightweight foreground service that activates only when text
                             input is detected. We prioritize battery efficiency over aggressive scanning. The
                             <code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code> permission is optional and only prevents
-                            Android from killing the service mid-use.</p>
+                            Android from killing the service mid-use.
+                        </p>
                     </div>
                 </section>
 
@@ -142,7 +148,8 @@
                         <p><strong>A:</strong> Yes. We process minimal personal data (only what you explicitly type as
                             prompts), and it's sent directly to AI providers with their own GDPR compliance. You have
                             the right to access, delete, and port your data at any time. See our <a
-                                href="/transparency/privacy-policy.html" style="color: var(--primary);">Privacy Policy</a>.</p>
+                                href="/transparency/privacy-policy.html" style="color: var(--primary);">Privacy
+                                Policy</a>.</p>
                     </div>
 
                     <div class="faq-item">
@@ -156,8 +163,9 @@
                         <h3>Q: What if Aido gets hacked or has a data breach?</h3>
                         <p><strong>A:</strong> Since we don't store user data on servers, a traditional "data breach" is
                             unlikely. If a vulnerability is discovered in the app itself, we will issue an immediate
-                            update and notify users via the Google Play release notes. See our <a href="/transparency/incidents.html"
-                                style="color: var(--primary);">Incident Response Plan</a>.</p>
+                            update and notify users via the Google Play release notes. See our <a
+                                href="/transparency/incidents.html" style="color: var(--primary);">Incident Response
+                                Plan</a>.</p>
                     </div>
                 </section>
 
@@ -197,15 +205,20 @@
             <button id="close-menu-btn" class="mobile-menu-toggle"><i class="ri-close-line"></i></button>
         </div>
         <ul class="sidebar-menu">
-            <li><a href="/transparency/index.html"><i class="ri-file-shield-line" style="margin-right:8px"></i> Constitution</a></li>
-            <li><a href="/transparency/permissions.html"><i class="ri-lock-unlock-line" style="margin-right:8px"></i> Permissions</a>
+            <li><a href="/transparency/index.html"><i class="ri-file-shield-line" style="margin-right:8px"></i>
+                    Constitution</a></li>
+            <li><a href="/transparency/permissions.html"><i class="ri-lock-unlock-line" style="margin-right:8px"></i>
+                    Permissions</a>
             </li>
             <li><a href="/transparency/accessibility.html"><i class="ri-eye-line" style="margin-right:8px"></i>
                     Accessibility</a></li>
-            <li><a href="/transparency/faq.html" class="active"><i class="ri-question-line" style="margin-right:8px"></i> FAQ</a></li>
-            <li><a href="/transparency/privacy-policy.html"><i class="ri-file-text-line" style="margin-right:8px"></i> Privacy
+            <li><a href="/transparency/faq.html" class="active"><i class="ri-question-line"
+                        style="margin-right:8px"></i> FAQ</a></li>
+            <li><a href="/transparency/privacy-policy.html"><i class="ri-file-text-line" style="margin-right:8px"></i>
+                    Privacy
                     Policy</a></li>
-            <li><a href="/transparency/changelog.html"><i class="ri-history-line" style="margin-right:8px"></i> Changelog</a></li>
+            <li><a href="/transparency/changelog.html"><i class="ri-history-line" style="margin-right:8px"></i>
+                    Changelog</a></li>
         </ul>
     </div>
 
